@@ -1,6 +1,28 @@
 # github-pr-create-merge Quick Guide
 
-아래 형식으로 요청하면 된다.
+
+## GitHub MCP 추가
+
+GitHub MCP가 없으면 먼저 MCP 설정에 `github` 서버를 추가하면 된다.
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "ghp_xxx"
+      }
+    }
+  }
+}
+```
+
+- MCP 설정 파일의 `mcpServers`에 위 예시를 추가
+- `GITHUB_TOKEN`은 GitHub Personal Access Token 사용
+- 권한은 최소 `repo`, `pull_request` 정도는 있어야 한다
+- 설정 반영 후 Codex 또는 IDE를 재시작
 
 ## 사용법
 
@@ -41,3 +63,4 @@
 
 - 저장소 입력은 앞 `/` 제거, 뒤 `.git` 제거 후 사용
 - 운영 배포는 `ticket + yyyymmdd`가 같이 있어야 한다
+
