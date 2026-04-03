@@ -63,4 +63,3 @@ GitHub MCP가 없으면 먼저 MCP 설정에 `github` 서버를 추가하면 된
 
 - 저장소 입력은 앞 `/` 제거, 뒤 `.git` 제거 후 사용
 - 운영 배포는 `ticket + yyyymmdd`가 같이 있어야 한다
-
